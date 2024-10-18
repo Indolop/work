@@ -1,0 +1,154 @@
+/* Убираем отступы и поля для всех элементов */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Основные стили для body: шрифт, цвет фона, цвет текста, плавный переход, flexbox и высота */
+body {
+    font-family: "Playfair Display", serif;
+    font-style: normal;
+    background-color: #fcfcfc; /* Цвет фона */
+    color: #bbbbbb; /* Цвет текста */
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Контейнер, который включает в себя sidebar и content, flexbox для горизонтальной компоновки */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* Стили для меню */
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin-top: auto;
+}
+
+/* Стили для иконок */
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+/* Стили для бокового меню (sidebar): ширина, фон, убираем padding и стили для внутреннего выравнивания */
+.sidebar {
+    width: 8%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #dfdede; /* Цвет фона бокового меню */
+}
+
+/* Стили для списка в sidebar */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Стили для элементов списка */
+.sidebar ul li {
+    margin: 0;
+}
+
+/* Стили для ссылок в sidebar */
+.sidebar ul li a {
+    text-decoration: none;
+    color: #777777; /* Цвет текста */
+}
+
+/* Стили для основного контента */
+.content {
+    width: 92%;
+    padding: 0;
+    overflow-y: auto; /* Добавляем вертикальную прокрутку */
+}
+
+/* Стили для header */
+header {
+    background-image: url('images/6dcdd732679361.568ee3e8744d6.jpg'); /* Фоновое изображение */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff; /* Цвет текста */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1500px; /* Высота заголовка */
+    padding: 0;
+    text-align: center;
+}
+
+/* Стили для h1 внутри header */
+header h1 {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0; /* Убираем отступы */
+}
+
+/* Стили для секций */
+section {
+    margin: 20px;
+    padding: 20px;
+}
+
+/* Стили для галереи */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Стили для изображений в галерее */
+.gallery img {
+    width: calc(50% - 10px); /* Ширина изображений в ряду */
+    height: auto;
+    display: block;
+}
+
+/* Темная тема - медиазапрос */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #222; /* Цвет фона для темной темы */
+        color: #fff; /* Цвет текста для темной темы */
+    }
+
+    .sidebar {
+        background-color: #222; /* Цвет фона бокового меню для темной темы */
+    }
+
+    .sidebar ul li a {
+        color: #ccc; /* Цвет ссылок для темной темы */
+    }
+
+    header {
+        background-image: url('images/6dcdd732679361.568ee3e8744d6.jpg'); /* Фоновое изображение */
+        background-size: cover;
+        background-position: center;
+        color: #fff; /* Цвет текста */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 1500px; /* Высота заголовка */
+        padding: 0;
+        text-align: center;
+    }
+
+    header h1 {
+        background: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон для текста */
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 0; /* Убираем отступы */
+    }
+
+    .content {
+        background-color: #222; /* Цвет фона контента для темной темы */
+    }
+}
